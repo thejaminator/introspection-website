@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Language Models Can Learn About Themselves by Introspection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .icon {
+            transition: transform 0.2s;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        body {
+            padding-top: 2rem;
+        }
+        .author-list a {
+            color: #0dcaf0;
+            text-decoration: none;
+        }
+        .author-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Looking Inward: Language Models Can Learn About Themselves by Introspection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .author-name {
+            font-weight: 600;
+        }
+        .institution {
+            font-style: italic;
+        }
+        .author-list a {
+            color: #333;
+            text-decoration: none;
+        }
+        .author-list a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .equal-authors {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-5">
+            <h1>Looking Inward: Language Models Can Learn About Themselves by Introspection</h1>
+            
+            <!-- Authors Row 1 -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <div class="author-list">
+                        <span class="author-name">Felix J Binder</span><sup>1,2*</sup>,
+                        <span class="author-name">James Chua</span><sup>3*</sup>,
+                        <span class="author-name">Tomek Korbak</span><sup>4</sup>,
+                        <span class="author-name">Henry Sleight</span><sup>5</sup>,
+                        <span class="author-name">John Hughes</span><sup>6</sup>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Authors Row 2 -->
+            <div class="row justify-content-center mt-2">
+                <div class="col-md-10">
+                    <div class="author-list">
+                        <span class="author-name">Robert Long</span><sup>7</sup>,
+                        <span class="author-name">Ethan Perez</span><sup>8</sup>,
+                        <span class="author-name">Miles Turpin</span><sup>9,10</sup>,
+                        <span class="author-name">Owain Evans</span><sup>3,11</sup>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institutions Row 1 -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <div class="institutions">
+                        <sup>1</sup><span class="institution">UC San Diego</span>,
+                        <sup>2</sup><span class="institution">Stanford University</span>,
+                        <sup>3</sup><span class="institution">Truthful AI</span>,
+                        <sup>4</sup><span class="institution">Independent</span>,
+                        <sup>5</sup><span class="institution">MATS Program</span>,
+                        <sup>6</sup><span class="institution">Speechmatics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institutions Row 2 -->
+            <div class="row justify-content-center mt-2">
+                <div class="col-md-10">
+                    <div class="institutions">
+                        <sup>7</sup><span class="institution">Eleos AI</span>,
+                        <sup>8</sup><span class="institution">Anthropic</span>,
+                        <sup>9</sup><span class="institution">Scale AI</span>,
+                        <sup>10</sup><span class="institution">New York University</span>,
+                        <sup>11</sup><span class="institution">UC Berkeley</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equal Contribution Note -->
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-10">
+                    <p class="equal-authors">* Equal contribution</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick Links -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <a href="#" class="text-info text-decoration-none">
+                            <div class="icon mb-2">
+                                <i class="bi-file-earmark-pdf" style="font-size: 4rem;"></i>
+                            </div>
+                            <h5>Paper</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="text-info text-decoration-none">
+                            <i class="bi-github icon mb-2" style="font-size: 4rem;"></i>
+                            <h5>Code</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="text-info text-decoration-none">
+                            <i class="bi-bar-chart-line icon mb-2" style="font-size: 4rem;"></i>
+                            <h5>Results</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="text-info text-decoration-none">
+                            <i class="bi-download icon mb-2" style="font-size: 4rem;"></i>
+                            <h5>Dataset</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4">Abstract</h3>
+                <div class="intro-text">
+                    <p>
+                        Humans acquire knowledge by observing the external world, but also by <span class="emphasis">introspection</span>. Introspection gives a person privileged access to their current state of mind (e.g., thoughts and feelings) that is not accessible to external observers. Can LLMs introspect?
+                        We define introspection as acquiring knowledge that is not contained in or derived from training data but instead originates from internal states. Such a capability could enhance model interpretability. Instead of painstakingly analyzing a model's internal workings, we could simply ask the model about its beliefs, world models, and goals.
+                    </p>
+                    <p>
+                        More speculatively, an introspective model might self-report on whether it possesses certain internal states—such as subjective feelings or desires—and this could inform us about the moral status of these states. Importantly, such self-reports would not be entirely dictated by the model's training data.
+                    </p>
+                    <p>
+                        We study introspection by finetuning LLMs to predict properties of their own behavior in hypothetical scenarios. For example, <span class="emphasis">"Given the input P, would your output favor the short- or long-term option?"</span>
+                        If a model <span class="model-name">M1</span> can introspect, it should outperform a different model <span class="model-name">M2</span> in predicting <span class="model-name">M1</span>'s behavior—even if <span class="model-name">M2</span> is trained on <span class="model-name">M1</span>'s ground-truth behavior. The idea is that <span class="model-name">M1</span> has privileged access to its own behavioral tendencies, and this enables it to predict itself better than <span class="model-name">M2</span> (even if <span class="model-name">M2</span> is generally stronger).
+                    </p>
+                    
+                    <p>
+                        In experiments with GPT-4, GPT-4o, and Llama-3 models (each finetuned to predict itself), we find that the model <span class="model-name">M1</span> outperforms <span class="model-name">M2</span> in predicting itself, providing evidence for introspection. Notably, <span class="model-name">M1</span> continues to predict its behavior accurately even after we intentionally modify its ground-truth behavior.
+                        However, while we successfully elicit introspection on simple tasks, we are unsuccessful on more complex tasks or those requiring out-of-distribution generalization.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4">Results</h3>
+                <div class="text-center">
+                    <img src="/api/placeholder/800/400" alt="Research Results" class="img-fluid mb-3">
+                    <figcaption class="text-muted fst-italic">
+                        Figure 1: Description of your results or visualization
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Citation</h5>
+                        <pre class="card-text font-monospace" style="white-space: pre-wrap; word-wrap: break-word;">
+@misc{binder2024lookinginwardlanguagemodels,
+    title={Looking Inward: Language Models Can Learn About Themselves by Introspection}, 
+    author={Felix J Binder and James Chua and Tomek Korbak and Henry Sleight and John Hughes and Robert Long and Ethan Perez and Miles Turpin and Owain Evans},
+    year={2024},
+    eprint={2410.13787},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL},
+    url={https://arxiv.org/abs/2410.13787}, 
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
