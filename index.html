@@ -36,6 +36,10 @@
         .image-gallery .text-center {
             padding-bottom: 3rem; /* Add padding between each image row */
         }
+        figcaption {
+            text-align: left;
+            font-size: 1.1875rem;
+        }
         </style>
         <title>Language Models Can Learn About Themselves by Introspection</title>
         <link rel="icon" href="assets/robot-icon.png" type="image/png" sizes="32x32">
@@ -118,7 +122,7 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="https://x.com/OwainEvans_UK/status/1847293434505396608" class="text-info text-decoration-none" target="_blank">
+                        <a href="https://threadreaderapp.com/thread/1847293315139715104.html" class="text-info text-decoration-none" target="_blank">
                             <div class="icon mb-2">
                                 <i class="bi-twitter" style="font-size: 4rem;"></i>
                             </div>
@@ -180,7 +184,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_1.jpeg" alt="Special access diagram" class="img-fluid mb-3">
                 <figcaption class="">
-                    Are LLMs capable of introspection, i.e. special access to their own inner states?
+                    Fig 1. Are LLMs capable of introspection, i.e. special access to their own inner states?
                     Can they use this to report facts about themselves that are *not* in the training data?
                     Yes — in simple tasks at least! This has implications for interpretability + moral status of AI.
                     An introspective LLM could tell us about itself — including beliefs, concepts & goals— by directly examining its inner states, rather than simply reproducing information in its training data.
@@ -192,7 +196,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_2.png" alt="M2 predicting M1" class="img-fluid mb-3">
                 <figcaption class="">
-                    We test if a model M1 has special access to facts about how it behaves in hypothetical situations.
+                    Fig 2. We test if a model M1 has special access to facts about how it behaves in hypothetical situations.
                     Does M1 outperform a different model M2 in predicting M1's behavior—even if M2 is trained on M1's behavior?
                     E.g. Can Llama 70B predict itself better than a stronger model (GPT-4o)?
                 </figcaption>
@@ -202,7 +206,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_3.jpeg" alt="Cross-prediction results" class="img-fluid mb-3">
                 <figcaption class="">
-                    Yes: Llama does better at predicting itself than GPT-4o does at predicting Llama. And the same holds in reverse.
+                    Fig 3. Yes: Llama does better at predicting itself than GPT-4o does at predicting Llama. And the same holds in reverse.
                     In fact, this holds for all pairs of models we tested. 
                     Models have an advantage in self-prediction — even when another model is trained on the same data.
                 </figcaption>
@@ -212,7 +216,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_4.jpeg" alt="Property" class="img-fluid mb-3">
                 <figcaption class="">
-                    Here is an example of the tasks we used to evaluate models:
+                    Fig 4. Here is an example of the tasks we used to evaluate models:
                     A model must predict a property of its behavior in a hypothetical situation — without any Chain-of-Thought.
                     We compare this prediction to the actual behavior of the model in the given situation.
                 </figcaption>
@@ -222,7 +226,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_5.jpeg" alt="More examples" class="img-fluid mb-3">
                 <figcaption class="">
-                    Here are more examples of tasks.
+                    Fig 5. Here are more examples of tasks.
                     The model must predict a *property* of its own response (e.g. whether the response is an odd or even number), not the response itself.
                     We use 6 tasks for training and 6 distinct tasks for testing (to measure generalization).
                 </figcaption>
@@ -232,7 +236,7 @@
             <div class="text-center mb-4">
                 <img src="assets/img_6.jpeg" alt="Behavioral change" class="img-fluid mb-3">
                 <figcaption class="">
-                    2nd test of introspection:
+                    Fig 6. 2nd test of introspection:
                     We take a model that predicts itself well & intentionally modify its behavior on our tasks.
                     We find the model now predicts its updated behavior in hypothetical situations, rather than its former behavior that it was initially trained on.
                 </figcaption>
@@ -242,7 +246,7 @@
             <div class="text-center mb-4">
                 <img src="assets/self_simulate.jpeg" alt="Self-simulation" class="img-fluid mb-3">
                 <figcaption class="">
-                    What mechanism could explain this introspection ability?
+                    Fig 7. What mechanism could explain this introspection ability?
                     We do not investigate this directly. 
                     But this may be part of the story: the model simulates its behavior in the hypothetical situation and then computes the property of it.
                 </figcaption>
